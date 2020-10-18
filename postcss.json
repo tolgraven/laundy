@@ -1,0 +1,9 @@
+{
+    "input": "resources/public/css/main.css",
+    "output": "resources/public/css/main.min.css",
+    "use": ["autoprefixer", "postcss-font-magician"],
+    "watch": true,
+    "autoprefixer": {
+        "browsers": "> 5%"
+    }
+}

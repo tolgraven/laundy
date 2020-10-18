@@ -1,0 +1,3 @@
+rootProject.name = 'tolgrAVen'
+
+include ':app'

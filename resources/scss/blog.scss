@@ -1,0 +1,146 @@
+/* BLOG STUFF */
+
+.blog {
+  z-index: 30;
+  background: var(--gradient-bg-main);
+}
+section.blog-post {
+  border: 0;
+  border-bottom: var(--line-width) solid;
+}
+.blog > section:last-of-type {
+  border: 0;
+}
+.blog-section {
+}
+.blog-comments {
+  background-color: var(--bg-1);
+  border: 0;
+  border-top: var(--line-width-md) solid;
+}
+.blog-comments-inner {
+  transition: max-height 0.25s;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+.blog-comments-inner.collapsed {
+  max-height: 30em; // bleh tho, want whoosh w/o capping... js calc actual height i guess and inject.
+  transition: max-height 0.10s;
+  // transition: max-height 0.5s;
+}
+.blog-comments-inner > section {
+  // line up top-level comments with line above
+  padding: var(--space) 0.25em;
+
+ }
+
+.blog-comment {
+  position: relative;
+  padding-bottom: 0.5rem;
+  border-top: var(--line-width-sm) solid;
+}
+
+// react transition group test...
+.comment-enter {
+  opacity: 0;
+}
+.comment-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.comment-exit {
+  opacity: 1;
+}
+.comment-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
+// initial mount of parent component children get this
+// when prop transitionAppear true
+.comment-appear {
+  opacity: 0.01;
+}
+.comment-appear.comment-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+
+.blog-comment-info {
+  font-size: 0.7em;
+  padding-bottom: 1.00em;
+}
+.blog-comment-user {
+  font-style: italic;
+  font-weight: bold;
+}
+.blog-btn {
+  background-color: var(--bg-2);
+  font-size: 0.8em;
+  border-radius: 0;
+}
+.blog-btn-collapse {
+  font-size: 70%;
+  display: inline;
+}
+.blog-nav-btn.current {
+  font-weight: bolder;
+  border: 0;
+  border-bottom: var(--line-width-sm) solid;
+}
+.blog-comment-vote {
+  opacity: 0;
+  transition: 0.15s;
+  margin-left: 0.75em;
+}
+.blog-comment-vote-btn {
+  font-weight: bold;
+  margin: 0;
+  padding: 0.4em 1.0em;
+}
+.blog-add-comment-btn {
+}
+.blog-reply-comment-btn {
+  position: absolute;
+  right: var(--space);
+  top: var(--space);
+  opacity: 0;
+  transition: 0.15s;
+}
+.blog-comment:hover .blog-reply-comment-btn,
+.blog-comment:active .blog-reply-comment-btn,
+.blog-comment:hover .blog-comment-vote,
+.blog-comment:active .blog-comment-vote {
+  opacity: 1;
+}
+.blog-reply-comment-btn:hover {
+  font-size: 0.9em;
+}
+
+.blog-adding-comment {
+  margin: 0;
+  padding: 1em 0em;
+  background-color: var(--bg-1);
+  color: var(--fg-2);
+}
+textarea.blog-adding-comment-textbox {
+  width: 100%;
+  max-width: 100%;
+  height: 6em;
+}
+
+.blog-adding-comment-textbox {
+  background-color: var(--bg-1);
+  color: var(--fg-2);
+}
+
+.blog-comment-preview {
+  background-color: var(--bg-2);
+  margin: var(--space-sm);
+  padding: 0.75em;
+}
+
+.blog-comment-title {
+  font-size: 105%;
+  font-weight: bold;
+}

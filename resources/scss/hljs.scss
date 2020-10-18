@@ -1,0 +1,102 @@
+/* HIGHLIGHT.JS - TODO change color scheme to box */
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+  padding: 1.00em;
+  background: linear-gradient(100deg, var(--bg-3) 10%, var(--bg-2) 90%, var(--bg-1) 102%);
+  border-bottom-left-radius: 0.7em;
+  /* border-bottom-left-radius: 5%; /1* fantastic w the clipping for especially two-line boxes but nyah good for big onez *1/ */
+  border-bottom-right-radius: 0.5em;
+	color: var(--fg-2);
+  /* font-weight: bolder; */
+}
+
+.hljs-comment,
+.hljs-quote {
+	color: #504949;
+	font-style: italic
+}
+.hljs-name {
+  color: var(--fg-1);
+}
+
+.hljs-keyword,
+.hljs-selector-tag {
+	color: var(--yellow-1);
+}
+
+.hljs-literal,
+.hljs-regexp,
+.hljs-template-variable,
+.hljs-variable {
+	color: var(--red);
+}
+
+.hljs-subst {
+	color: var(--aqua-3);
+}
+
+.hljs-number,
+.hljs-tag {
+	color: var(--purple);
+}
+
+.hljs-type {
+	color: var(--orange);
+}
+
+.hljs-attr,
+.hljs-bullet,
+.hljs-link,
+.hljs-symbol {
+	color: var(--blue);
+}
+
+.hljs-params {
+	color: #d0d0ff
+}
+
+.hljs-built_in,
+.hljs-builtin-name {
+  color: var(--orange-3);
+}
+.hljs-attribute {
+	color: #cda869
+}
+
+.hljs-meta {
+	color: var(--aqua);
+}
+
+.hljs-string,
+.hljs-section,
+.hljs-title {
+	color: var(--green);
+}
+
+.hljs-addition {
+	background-color: var(--green-2);
+	/* color: #e6e1dc; */
+	display: inline-block;
+	width: 100%
+}
+
+.hljs-deletion {
+	background-color: var(--red-2);
+	/* color: #e6e1dc; */
+	display: inline-block;
+	width: 100%
+}
+
+.hljs-selector-class {
+	color: var(--orange);
+}
+
+.hljs-selector-id {
+	color: var(--blue-3);
+}
+
+.hljs-emphasis { font-style: italic }
+.hljs-strong { font-weight: 700 }
+.hljs-link { text-decoration: underline }

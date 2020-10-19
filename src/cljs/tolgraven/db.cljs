@@ -82,7 +82,7 @@
 
    :options {:auto-save-vars true
              :transition {:time 200 :style :slide} ; etc
-             :hud {:timeout 30 :level :info}}
+             :hud {:timeout 15 :level :info}}
    })
    
 ; DONT FORGET STUPID #_ fucks you for some reason??

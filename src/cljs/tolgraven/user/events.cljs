@@ -16,21 +16,21 @@
          user (get-user (:user login) (-> db :users))]
      (if (and (pos? (count (:user login)))
               (= (:password login) (:password user)))
-       {:dispatch-n [[:user/login (:user login)]
-                     [:state [:user-section] :admin]]}
-       {:dispatch [:diag/new :error "Sign in" "failed validation"]}))))
+       {:dispatch [:user/login (:user login)]}
+       {:dispatch [:diag/new :error "Sign in" "Can't find user, or wrong password"]}))))
 
 (rf/reg-event-db :user/login 
 (fn [db [_ user]]
   (-> db
       (assoc-in [:state :user] user)
-      (assoc-in [:state :user-section] false))))
+      (assoc-in [:state :user-section] :admin))))
 
 (rf/reg-event-db :user/logout 
 (fn [db [_ user]]
   (-> db
       (update-in [:state] dissoc :user)
-      (assoc-in [:state :user-section] false))))
+      (assoc-in [:state :user-section] :login)
+      )))
 
 
 (rf/reg-event-fx

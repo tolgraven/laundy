@@ -26,7 +26,7 @@
 (defn sign-in-or "Sign in or go to reg page"
   []
   [:div.user-forms.noborder
-   [:h2 "You must be logged in"]
+   [:h2 "Please log in to book"]
    [sign-in]
    [:button
     {:on-click #(rf/dispatch [:user/request-login])
@@ -64,7 +64,6 @@
 (defn admin "User admin page" []
   (let [user @(rf/subscribe [:user/active-user-details])]
     [:div
-     [:div "USER ADMIN"]
      [:h3 (:name user)]
      [:span [:em (:email user)]] [:br]
      [ui/button "Log out" :logout :action #(rf/dispatch [:user/logout])]

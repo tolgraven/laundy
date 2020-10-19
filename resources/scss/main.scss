@@ -460,7 +460,7 @@ button {
 }
 button label {
   position: relative;
-  font-size: 2.8rem;
+  font-size: 2.0em;
   z-index: 2;
   color: var(--green);
 }
@@ -572,11 +572,11 @@ video {
 .close-btn {
   position: absolute;
   right: -5px; top: -5px;
-  background: rgba(30, 30, 30, 0.7);
-  color: #edc;
-  border-radius: 50%;
+  // background: rgba(30, 30, 30, 0.7);
+  color: #222;
+  // border-radius: 50%;
   padding: 0.1em;
-  font-size: 1.0rem;
+  font-size: 1.5rem;
 }
 
 .hud {
@@ -587,10 +587,11 @@ video {
 }
 .hud-message {
   margin: var(--space);
-  padding: 0.3rem 0.7rem;
+  padding: 0.5rem 0.9rem;
   border: 1px solid rgba(150, 150, 150, 0.3);
   color: var(--fg-1);
-  // opacity: 0.8;
+  font-size: 1.65em;
+  opacity: 0.93;
 }
 // .hud-message.error   { background: #{'hsla(var(--red), 0.8)'}; }
 .hud-message.error   { background: var(--red); color: var(--light-1); }

@@ -1,26 +1,22 @@
 .user-forms {
-  padding: var(--space-lg) calc(2 * var(--space-lg));
+  // padding: var(--space-lg) calc(2 * var(--space-lg));
   background: var(--bg-2);
 }
 
 .user-section-wrapper {
   max-height: 0;
   transition: max-height 0.4s;
+  z-index: 0;
 }
 .user-section-wrapper.active {
-  max-height: 30vh;
-  overflow-y: scroll;
+  max-height: 35vh;
+  overflow-y: hidden;
   box-shadow: 1px 1px 10px 10px rgba(30, 30, 45, 0.3);
 }
 .user-section {
-  // margin: var(--space-lg) 0;
-  border: var(--line-width) solid;
+  // border: var(--line-width) solid;
   color: var(--dark-1);
-  // box-shadow: 1px 1px 10px 10px rgba(30, 30, 45, 0.5);
-  // background: var(--bg-2);
-  // background: rgba(240, 255, 220, 0.65);
   background: var(--bg-2);
-
 }
 
 .user-sign-in-reg-container {

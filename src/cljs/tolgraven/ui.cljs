@@ -224,8 +224,8 @@
                   {:class class
                    :style {:position :relative}
                    :on-click #(rf/dispatch (or (:on-click actions) ; or actions navigate to log...
-                                               [:hud :modal id])) }
-                  [:span title]
+                                               [:diag/unhandled :remove id])) }
+                  [:span [:em title]]
                   [:p message]
                   [close (fn [e]
                              (.stopPropagation e) ;it's causing a click on hud-message as well...

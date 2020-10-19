@@ -58,7 +58,7 @@
    [:a {:name "linktotop" :id "linktotop"}]
 
    (let [user-section @(rf/subscribe [:state [:user-section]])]
-     [safe [:div.user-section-wrapper.stick-up.hi-z
+     [safe [:div.user-section-wrapper.stick-up ;.hi-z
       {:class (when (not= user-section :closing) "active")}
       (when user-section
         [:div.user-section.stick-up.hi-z ;.noborder
@@ -129,11 +129,11 @@
           [:div
            {:style {:padding "0.5rem"}}
            [:button 
-            {:style {:background-color (cond
-                                        (and (pos? (count user)) (= booked-by user)) "var(--green)"
-                                        (and (pos? (count user)) (= queued-by user)) "var(--purple)"
-                                        (pos? (count booked-by)) "var(--red)")
-                                   }
+            {:style {:background-color
+                     (cond
+                       (and (pos? (count user)) (= booked-by user)) "var(--green)"
+                       (and (pos? (count user)) (= queued-by user)) "var(--purple)"
+                       (pos? (count booked-by)) "var(--red)") }
              :on-click #(rf/dispatch [:booking/request day shift])}
             (name shift)]]))])) ]))
 

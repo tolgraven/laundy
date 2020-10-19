@@ -128,8 +128,9 @@
                  ^{:key (str "booking-day-" (name day) "-shift-" (name shift))}
           [:div
            {:style {:padding "0.5rem"}}
-           [:button 
-            {:style {:background-color
+           [:button.booking-btn
+            {:style {:transition "all 0.3s"
+                     :background-color
                      (cond
                        (and (pos? (count user)) (= booked-by user)) "var(--green)"
                        (and (pos? (count user)) (= queued-by user)) "var(--purple)"

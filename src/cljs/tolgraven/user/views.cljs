@@ -11,14 +11,14 @@
   []
   [:section>form
    [:input {:class "input-dark" :placeholder "Username"
+            :autoComplete "username"
             :value @(rf/subscribe [:state [:login-field :user]])
             :on-change #(rf/dispatch-sync [:state [:login-field :user] (-> % .-target .-value)])}]
-   [:span "error"]
    [:br]
    
    [:input {:type :password 
             :class "input-dark" :placeholder "Password"
-            :autocomplete "current-password"
+            :autoComplete "current-password"
             :value @(rf/subscribe [:state [:login-field :password]])
             :on-change #(rf/dispatch-sync [:state [:login-field :password] (-> % .-target .-value)])}] ])
 
@@ -43,14 +43,13 @@
              :style {:position :absolute :left 0 :top 0}} "<"]
    [:h2 "Register"]
    [sign-in] ;well need different validation here (not exists etc)
+   
    [ui/input-text
     :path [:state [:register-field :email]]
+    :placeholder "Email"
+    :autoComplete "email"
     :on-change #(rf/dispatch [:state [:register-field :email] %])]
    
-   [:input
-    {:class "input-dark" :placeholder "Email"
-     :value @(rf/subscribe [:state [:register-field :email]])
-     :on-change #(rf/dispatch-sync [:state [:register-field :email] (-> % .-target .-value)])}]
    [:br]
    [:button
     {:on-click #(rf/dispatch [:user/request-register])}

@@ -1,16 +1,11 @@
-// @import url('https://fonts.googleapis.com/css?family=Open+Sans:500,600,700');
 @import "burger.scss";
 @import "peripheral.scss";
 @import "header.scss";
 @import "footer.scss";
 @import "hero.scss";
-@import "gallery.scss";
 @import "mods.scss";
-@import "hljs.scss";
 @import "native-inputs.scss";
-@import "blog.scss";
 @import 'user.scss';
-@import "experiments.scss";
 
 /* wanted to put in own file but wasnt compatible with live reload solution... */
 :root { /* general vars */
@@ -430,6 +425,12 @@ button:hover .blur-bg, button:active .blur-bg,
 .blur-bg:hover, .blur-bg:active {
   opacity: 1.0;
 }
+
+.booking-btn {
+  transition: background 0.4s ease-out;
+}
+
+
 
 input {
   margin: 0 0.25em; /* just for checkboxes... */

@@ -9,8 +9,8 @@
   z-index: 0;
 }
 .user-section-wrapper.active {
-  max-height: 35vh;
-  overflow-y: hidden;
+  max-height: 50vh;
+  // overflow: hidden;
   box-shadow: 1px 1px 10px 10px rgba(30, 30, 45, 0.3);
 }
 .user-section {

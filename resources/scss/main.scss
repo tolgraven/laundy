@@ -15,11 +15,11 @@
 /* wanted to put in own file but wasnt compatible with live reload solution... */
 :root { /* general vars */
   /* SIZES */
-  --space:             1.5rem;
-  --space-lg:          2.5rem;
+  --space:             1.3rem;
+  --space-lg:          2.0rem;
   --space-sides:       0.0rem; /* inner horizontal margin */
   --space-edges:       var(--space-sides); /* size of outer edges  */
-  --space-top:         4rem; /* top margin above header */
+  --space-top:         2rem; /* top margin above header */
     --media-width-main: calc(100vw - 2 * var(--space-edges) - 2 * var(--line-width)); /* would it be context dependent or just use root 100% i guess uh */
   --banner-height:     600px;
   --logo-ratio:        0.4060; /* lol, 41.25 actual ratio, 40.6 works on chrome desktop, 40.0 on safari ios... */ /* just use img... */ /* or make logo look like i want in first place - needs higher-res or vector bounce anyways */
@@ -355,52 +355,11 @@ main { /* dunno purpose of why I choose .main-content... */
   border-left:  var(--line-width-vert) solid; /* should make configurable. off looks p nice on main page */
   border-right: var(--line-width-vert) solid; /* should make configurable. off looks p nice on main page */
   background: var(--gradient-bg-main);
-  margin-top: var(--space-lg);
+  margin-top: var(--space);
   padding-bottom: calc(3.5 * var(--space-lg)); /* XXX actually, footer height... */
   position: relative;
   overflow-y: hidden;
 }
-pre {
-  overflow: scroll;
-  /* max-height: 6em; */
-  /* white-space: pre-wrap; */
-  background-color: var(--bg-2);
-  color: var(--fg-2);
-  padding: 1.25em;
-  margin: 1.00em calc(-0.5 * var(--space));
-  border-top: var(--line-width-sm) solid;
-}
-
-
-p > code { /* single-word vars etc */
-  background-color: var(--bg-2);
-  color: var(--fg-3);
-  padding: 0.4em 0.3em;
-}
-/* DOCS SECTION */
-section.docs a {
-  color: var(--blue-2);
-  font-style: italic;
-}
-section.docs p.title {
-  border-top: var(--line-width-sm) solid currentColor;
-  /* background-color: var(--bg-2); */
-  background: linear-gradient(to right, var(--bg-2) 85%, var(--bg-1));
-  margin: 1.7em 0.5em 1em;
-  font-size: 1.4em;
-  font-weight: 600;
-  width: 50%;
-}
-section.docs .bs-callout {
-  margin-top: 2rem;
-  padding: var(--space);
-  background-color: var(--bg-2);
-}
-section.docs .bs-callout h4 {
-  font-size: 1.1em;
-  margin-bottom: 0.75em;
-}
-
 
 .column {
   margin: var(--space);
@@ -415,7 +374,7 @@ section { /* one main section (img + header + piece of content) */
   position: relative;
   justify-content: center;
   align-items: middle;
-  padding:   var(--space-lg) var(--space-lg); /* for padding-less main: */
+  padding:   var(--space) var(--space-lg); /* for padding-less main: */
   border-top: var(--line-width) solid;
 }
 section > h1, .jumbo > h1 {
